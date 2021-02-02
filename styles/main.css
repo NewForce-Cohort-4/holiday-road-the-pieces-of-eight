@@ -1,8 +1,17 @@
-:root {
-    /* CSS HEX */
-    --dark-lava: #463f3a;
-    --middle-grey: #8a817c;
-    --pale-silver: #bcb8b1;
-    --alabaster: #f4f3ee;
-    --melon: #e0afa0;
-    }
+.card-text{
+    text-align: center;
+    justify-content: center;
+    align-items: center ;
+    
+}
+
+.card-img-top {
+	height: 800px;
+    width: 1300px;
+}
+
+.card-text-nav {
+    text-align: center;
+    padding-right: 19em;
+    color: white;
+}
