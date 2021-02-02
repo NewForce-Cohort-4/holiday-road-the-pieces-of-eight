@@ -15,3 +15,12 @@
     padding-right: 19em;
     color: white;
 }
+
+:root {
+    /* CSS HEX */
+    --dark-lava: #463F3A;
+    --middle-grey: #8A817C;
+    --pale-silver: #BCB8B1;
+    --alabaster: #F4F3EE;
+    --melon: #E0AFA0;
+    }
