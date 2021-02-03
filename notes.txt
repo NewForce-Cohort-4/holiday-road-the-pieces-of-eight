@@ -1,0 +1,69 @@
+What folders & files do we need?
+    
+    -parks folder
+        - Park.js
+        - ParkProvider.js
+        - ParkSelector.js
+
+    -eateries folder
+        - Eatery.js
+        - EateriesProvider.js
+        - EaterySelector.js
+
+    -attraction folder
+        - Atraction.js
+        - AttractionsProvider.js
+        - AttractionSelector.js
+
+    -weather folder
+        - Weather.js
+        - WeatherProvider.js
+        - WeatherSelector.js
+
+
+What functions should be in those files?
+
+    - Park.js
+        - render single park name HTML for itenerary preview
+
+    - ParkProvider.js
+        - fetch data from API and hold for us to use 
+
+    - ParkSelector.js
+        - Builds the HTML for the dropdown. Has an event listener with a conditional to determine which park was selected
+
+What should those files import and export?
+
+- Park function in Park.js should export to ParkList.js
+- useParks() and getParks() from ParkProvider.js should export to ParkSelector.js and ParkList.js
+- render() from ParkSelect.js to main
+
+ 
+What click events do we need? What happens when the user clicks in the dropdown?
+
+- A "change" event for each of the three dropdown boxes
+- An event listener for the details button 
+
+Where will the details button be rendered?
+- Park.js
+
+
+Where should we write click events? Which files?
+
+- ParkSelect.js, EateriesSelect.js, LocationsSelect.js
+
+
+What do we want to show up on page load? This will be called in main.js
+
+- Navbar, header image, three dropdowns, and footer
+
+
+What should we write in HTML and what should we render in Javascript?
+
+- Header, images, and footer will written in HMTL. Everything else will be rendered in Javascript
+
+
+Where will the details appear in the DOM?
+- Between itenarary preview and footer
+
+
