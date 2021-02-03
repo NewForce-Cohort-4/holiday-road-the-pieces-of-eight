@@ -33,17 +33,31 @@ eventHub.addEventListener("change", (eventObject) => {
     
 
     if(eventObject.target.id === "parkSelect"){
-        printString = `"This is the park that was selected: ", ${eventObject.target.value}`
-        document.querySelector(".park-preview").innerHTML.innerHTML=printString
+        console.log(eventObject.target.value);
+        if(eventObject.target.value == 0){
+            document.querySelector(".park-preview").innerHTML=' '
+
+        }else{
+        printString = `This is the park that was selected:${eventObject.target.value}
+        <div>
+        <button id="park-details">More Details</button>
+         </div>  
+         `
+        document.querySelector(".park-preview").innerHTML=printString
+        
         //parkList(eventObject.target.value)
+        }
     }
 })
 
+
+
 eventHub.addEventListener("change", (eventObject) => {
-    
-    if(eventObject.target.id === "parkSelect"){
-        printString = `"This is the park that was selected: ", ${eventObject.target.value}`
-        document.querySelector(".park-preview").innerHTML.innerHTML=printString
-        //parkList(eventObject.target.value)
+    let parkDetailsString = '';
+    if (eventObject.target.id === 'park-details'){
+        parkDetailsString = eventObject.target.value
+        document.querySelector('.park-details').innerHTML=parkDetailsString
     }
-})
+
+
+    })      

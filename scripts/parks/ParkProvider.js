@@ -5,7 +5,7 @@ let parkNames = []
      return parks.slice()
  }
  export const useParkNames = () => {
-     console.log(parkNames);
+     //console.log(parkNames);
      return parkNames
  }
 
@@ -22,7 +22,7 @@ let parkNames = []
                parks.forEach(p => {
                    parkNames.push(p.fullName)
                })
-               console.log(parkNames);
+               //console.log(parkNames);
              //console.log(parks.data[0].fullName);
                
            })
