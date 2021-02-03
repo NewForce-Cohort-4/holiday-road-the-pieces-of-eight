@@ -2,7 +2,7 @@ import { getAttractions, useAttractions } from "./AttractionProvider.js"
 
 import { Attractions } from "./Attractions.js"
 
-const contentTarget = document.querySelector("#filter__attraction")
+const contentTarget = document.querySelector(".filter-attraction")
 // Get a reference to the DOM element where the <select> will be rendered
 const eventHub = document.querySelector("body")
 
@@ -17,12 +17,15 @@ export const attractionName = () => {
 const render = attractionCollection => {
 
     contentTarget.innerHTML = `
+    <select class='dropdown'>
     <option value="0">Please select an attraction...</option>
     ${attractionCollection.map(attractionObject => {
         const attraction = attractionObject.name
-        return `<option>${attraction}</option>`
+        return `<option>${attraction}</option>
+        `
      }).join("")//changes array to string
     }
+    </select>
     `}
 
 
