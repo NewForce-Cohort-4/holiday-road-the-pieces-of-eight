@@ -1,3 +1,9 @@
-import { } from "./parks/ParkSelect/js"
+// import { } from "./parks/ParkSelect/js"
 
-render()
+// render()
+
+import { attractionName } from "./attractions/AttractionsSelect.js"
+attractionName()
+
+//import { AttractionList } from "./attractions/AttractionsSelect.js"
+AttractionList()
