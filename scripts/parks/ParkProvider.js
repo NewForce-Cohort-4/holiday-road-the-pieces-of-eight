@@ -1,7 +1,7 @@
 let parks = []
 
  export const useParks = () => {
-     return useParks.slice()
+     return parks.slice()
  }
 
  export const getParks = () => {
