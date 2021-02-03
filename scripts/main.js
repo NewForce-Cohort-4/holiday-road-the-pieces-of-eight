@@ -1,3 +1,4 @@
-import { } from "./parks/ParkSelect/js"
+import {EaterySelect} from "./eateries/EaterySelect.js"
 
-render()
+
+EaterySelect()
