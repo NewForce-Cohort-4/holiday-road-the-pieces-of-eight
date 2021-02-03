@@ -4,7 +4,7 @@ import { attractionName } from "./attractions/AttractionsSelect.js"
 import {ParkSelect} from './parks/ParkSelect.js'
 
 //useParkNames()
-//ParkSelect()
+ParkSelect()
 attractionName()
 
 EaterySelect()
