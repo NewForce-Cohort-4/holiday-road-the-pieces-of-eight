@@ -6,13 +6,13 @@
 }
 
 .card-img-top {
-	height: 800px;
-    width: 1300px;
-}
+    background-image: url("images/pexels-james-wheeler-417074.jpg")
+
+} 
 
 .card-text-nav {
     text-align: center;
-    padding-right: 19em;
+    padding-right: 17em;
     color: white;
 }
 
