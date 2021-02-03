@@ -1,3 +1,5 @@
-import { } from "./parks/ParkSelect/js"
+import { useParkNames } from "./parks/ParkProvider.js"
+import { ParkSelect, render } from "./parks/ParkSelect.js"
 
-render()
+useParkNames()
+ParkSelect()

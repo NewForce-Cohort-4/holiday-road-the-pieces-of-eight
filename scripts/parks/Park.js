@@ -4,3 +4,4 @@ export function Park(parkObject) {
         <h2>${parkObject.name}</h2>
     </div>`
 }
+
