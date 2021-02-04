@@ -2,7 +2,7 @@ import { getAttractions, useAttractions } from "./AttractionProvider.js"
 
 import { Attractions } from "./Attractions.js"
 
-const contentTarget = document.querySelector("#filter__attraction")
+const contentTarget = document.querySelector(".filter-attraction")
 // Get a reference to the DOM element where the <select> will be rendered
 const eventHub = document.querySelector("body")
 
@@ -17,12 +17,15 @@ export const attractionName = () => {
 const render = attractionCollection => {
 
     contentTarget.innerHTML = `
-    <option value="0">Please select an attraction...</option>
-    ${attractionCollection.map(attractionObject => {
-        const attraction = attractionObject.name
-        return `<option>${attraction}</option>`
+    <select class='dropdown' id='attractionSelect'>
+        <option value="0">Please select an attraction...</option>
+            ${attractionCollection.map(attractionObject => {
+                const attraction = attractionObject.name
+                return `<option id='attractionSelect'>${attraction}</option>
+        `
      }).join("")//changes array to string
     }
+    </select>
     `}
 
 
@@ -32,7 +35,7 @@ eventHub.addEventListener("change", (eventObject) => {
     // To be more specific, we need to know specifically what we clicked on
     // console.log("Here is the element you clicked on: ", eventObject.target)
 
-    if(eventObject.target.id === "filter__attraction"){
+    if(eventObject.target.id === "attractionSelect"){
         console.log("You selected something from the attraction dropdown")
         console.log("This is the attraction selected: ", eventObject.target.value);
 
