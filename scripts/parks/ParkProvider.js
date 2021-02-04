@@ -1,3 +1,6 @@
+import {settings} from '../Setting.js'
+let npsKey = settings.npsKey
+
 let parks = []
 let parkNames = []
 
@@ -11,7 +14,7 @@ let parkNames = []
 
  export const getParks = () => {
     // Request the data
-    return fetch("https://developer.nps.gov/api/v1/parks?limit=600&api_")
+    return fetch("https://developer.nps.gov/api/v1/parks?limit=600&api_key="+ npsKey)
        // Convert the JSON string reposne to a Javascript data structure (object or array)
        .then(response => response.json())
        // Do something with the data
