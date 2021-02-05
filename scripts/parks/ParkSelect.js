@@ -38,13 +38,13 @@ export const render = (parkNameArray) => {
 const eventHub = document.querySelector("body")
 let printString = ''
 eventHub.addEventListener("change", (eventObject) => {
-    let chosenPark = ''  
+    //let chosenPark = ''  
 
     if(eventObject.target.id === "parkSelect"){
         if(eventObject.target.value == 0){
             document.querySelector(".park-preview").innerHTML=' '
         }else{
-        printString = `This is the park that was selected:${eventObject.target.value}
+        printString = `
         <div>
         <button id="park-detail">More Details</button>
          </div>  
