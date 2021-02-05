@@ -24,3 +24,15 @@ EaterySelect()
 
 
 import {} from './parks/ParkList.js'
+
+
+
+
+
+
+
+
+
+//import {getWeather} from './weather/WeatherProvider.js'
+import {weatherPrinter} from './weather/WeatherList.js'
+//getWeather()
