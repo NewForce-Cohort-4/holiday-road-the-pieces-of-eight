@@ -1,17 +1,17 @@
+
 import {settings} from '../Setting.js'
 let npsKey = settings.npsKey
 
+//unaltered return froom nps api. An object that includes an array of objects
 let parks = []
-let parkNames = []
 
+//peeled away first layer to get array of objects
+let parksArr = []
  export const useParks = () => {
-     return parks.slice()
- }
- export const useParkNames = () => {
-     //console.log(parkNames);
-     return parkNames
+     return parksArr.slice()
  }
 
+//api fetch call
  export const getParks = () => {
     // Request the data
     return fetch("https://developer.nps.gov/api/v1/parks?limit=600&api_key="+ npsKey)
@@ -20,14 +20,15 @@ let parkNames = []
        // Do something with the data
        .then(
            parsedParks => {
-               parks = parsedParks.data
+                parks = parsedParks
+                //console.log(parks);
+                parks.data.forEach(element => {
+                   parksArr.push(element);
+               });
                
-               parks.forEach(p => {
-                   parkNames.push(p.fullName)
-               })
-               //console.log(parkNames);
-             //console.log(parks.data[0].fullName);
                
-           })
-}
+            });
+               
+           }
+
 
