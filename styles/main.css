@@ -1,3 +1,25 @@
+:root {
+    /* CSS HEX */
+    --dark-lava: #463F3A;
+    --middle-grey: #8A817C;
+    --pale-silver: #BCB8B1;
+    --alabaster: #F4F3EE;
+    --melon: #E0AFA0;
+    }
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #463F3A;
+}
+
+.nav-link {
+    color:#F4F3EE;
+}
+
 .card-text{
     text-align: center;
     justify-content: center;
@@ -10,17 +32,30 @@
 
 } 
 
-.card-text-nav {
-    text-align: center;
-    padding-right: 17em;
-    color: white;
+.name-head {
+    display: flex;
+    background-image: url(/images/pexels-photo-459225.jpeg);
+    align-items: flex-end;
+    justify-content: flex-end;
+    height: 30vh;
+    width: 100%;
+    z-index: 1;
+    margin: 0%;
 }
 
-:root {
-    /* CSS HEX */
-    --dark-lava: #463F3A;
-    --middle-grey: #8A817C;
-    --pale-silver: #BCB8B1;
-    --alabaster: #F4F3EE;
-    --melon: #E0AFA0;
-    }
+.dropdowns {
+    display: flex;
+}
+
+.filter_attraction {
+    margin: auto;
+    padding: auto;
+}
+
+.filters-parks {
+    margin: auto;
+}
+
+.filters-eateries {
+    margin: auto;
+}

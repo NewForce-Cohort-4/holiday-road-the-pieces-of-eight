@@ -9,7 +9,7 @@
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
 <body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark bg-gradient">
+    <nav class="navbar navbar-expand-md">
         <div class="container-fluid">
           <img src="images\pieces-of-eight-logo_copy.png" height="100"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,44 +21,44 @@
                 <a class="nav-link active" aria-current="page" href="#"><h1>Home</h1></a>
             </ul>
           </div>
-          <section><h1 class="card-text-nav">Travel Itinarary</h1></section>
         </div>
       </nav>
     <header>
-      <div>
-          <img src="images\pexels-photo-459225.jpeg" class="card-img-top" alt="...">
-        </div>
+      <div class="name-head">
+        <h1>Travel Itinarary</h1>
+      </div>
       </header>
-      <div>
-          <div class='filter_attraction'></div>
-          <div class="filters-parks"></div>
-          <div class='filters-eateries'></div>
+      <div class="dropdowns row align-items-center">
+          <div class='filter_attraction col-sm-4'></div>
+          <div class="filters-parks col-sm-4"></div>
+          <div class='filters-eateries col-sm-4'></div>
       </div>
     
       <div class='weather-container'></div>
 
-      <div class='itenerary-preview-container'>
+      <div class='itenerary-preview-container row'>
         <div>
-        <div class='attraction-preview'></div>
+        <div class='attraction-preview col-sm-4'></div>
         </div>
         
         <div>
-        <div class='park-preview'></div>
+        <div class='park-preview col-sm-4'></div>
         </div>
         
         <div>
-        <div class='eatery-preview'></div>
+        <div class='eatery-preview col-sm-4'></div>
         </div>
       </div>
 
-      <div class='details-container'>
-      <div class='attraction-details'></div>
-      <div class='park-details'></div>
-      <div class='eatery-details'></div>
+      <div class='details-container row'>
+      <div class='attraction-details col-sm-4'></div>
+      <div class='park-details col-sm-4'></div>
+      <div class='eatery-details col-sm-4'></div>
       </div>
     
   <script type="module" src="./scripts/main.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
 </body>
 
 <footer class="container-auto container-style bg-dark bg-gradient text-light mt-5 p-3">
