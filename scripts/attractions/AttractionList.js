@@ -20,8 +20,6 @@ document.querySelector("body").addEventListener("click", (EventObject) => {
         //detailListString = `${matchingAttraction.description}`
         
         })
-    
-    
     }
     
     document.querySelector(".attraction-details").innerHTML = `${matchingAttraction.description}`

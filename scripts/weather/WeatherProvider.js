@@ -16,9 +16,9 @@ export const useCurrentWeather = () => {
  
 
 //api fetch call
- export const getWeather = () => {
+ export const getWeather = (latNum,longNum) => {
     // Request the data
-    return fetch('https://api.openweathermap.org/data/2.5/onecall?lat='+lat+'&'+'lon='+lon+'&units=imperial&exclude=minutely,hourly,&appid='+APIkey)
+    return fetch('https://api.openweathermap.org/data/2.5/onecall?lat='+latNum+'&'+'lon='+longNum+'&units=imperial&exclude=minutely,hourly,&appid='+APIkey)
        // Convert the JSON string reposne to a Javascript data structure (object or array)
        .then(response => response.json())
        // Do something with the data
@@ -27,18 +27,10 @@ export const useCurrentWeather = () => {
                 weather = parsedWeather
                 weatherDaily = weather.daily
                 weatherCurrent = weather.current.weather
+                console.log(weather.daily);
                 //console.log(weatherCurrent);
             });
                
 }
 
-
-
-
-        //    https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API key}
-        //    https://api.openweathermap.org/data/2.5/onecall?lat=33.441792&lon=-94.037689&exclude=hourly,daily&appid={API key}
-        //https://api.openweathermap.org/data/2.5/onecall?lat=33.441792&-94.037689&exclude=minutely,hourly,&appid=360cacbe7a7d66806cb9469e969cd060 
-
-        let lat = 33.441792
-        let lon = -94.037689
-        let APIkey = '360cacbe7a7d66806cb9469e969cd060'
+let APIkey = '360cacbe7a7d66806cb9469e969cd060'
