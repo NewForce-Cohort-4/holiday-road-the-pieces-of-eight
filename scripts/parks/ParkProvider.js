@@ -21,7 +21,8 @@ let parksArr = []
        .then(
            parsedParks => {
                 parks = parsedParks
-                //console.log(parks);
+                //console.log(parks.data[0].latLong);
+                //console.log(parks.data[0]);
                 parks.data.forEach(element => {
                    parksArr.push(element);
                });
