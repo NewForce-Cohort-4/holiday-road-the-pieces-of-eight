@@ -44,7 +44,7 @@ eventHub.addEventListener("change", (eventObject) => {
         if(eventObject.target.value == 0){
             document.querySelector(".park-preview").innerHTML=' '
         }else{
-        printString = `This is the park that was selected:${eventObject.target.value}
+        printString = `<h3>Parks</h3>${eventObject.target.value}
         <div>
         <button id="park-detail">More Details</button>
          </div>  
