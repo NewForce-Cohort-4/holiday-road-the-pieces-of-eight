@@ -9,7 +9,7 @@ export const getAttractions = () => {
         .then(response => response.json())
         .then(
             parsedAttractions => {
-                console.table(parsedAttractions) //check to see if printing to the console
+                //console.table(parsedAttractions) //check to see if printing to the console
                 attractions = parsedAttractions
             }
         )

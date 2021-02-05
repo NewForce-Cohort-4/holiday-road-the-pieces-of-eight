@@ -15,7 +15,7 @@ document.querySelector("body").addEventListener("click", (EventObject) => {
                 return singleAttractionInLoop.name === EventObject.target.value
         })
 
-        console.log("Description", matchingAttraction.description)
+        //console.log("Description", matchingAttraction.description)
 
         //detailListString = `${matchingAttraction.description}`
         
@@ -23,6 +23,6 @@ document.querySelector("body").addEventListener("click", (EventObject) => {
     }
     
     document.querySelector(".attraction-details").innerHTML = `${matchingAttraction.description}`
-    console.log("Description", matchingAttraction.description)
+    //console.log("Description", matchingAttraction.description)
     // detailListString += attractionSelect.description;
 })
