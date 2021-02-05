@@ -1,23 +1,28 @@
-import { useAttractions } from "./AttractionProvider"
+import { getAttractions, useAttractions } from "./AttractionProvider.js";
+
 
 document.querySelector("body").addEventListener("click", (EventObject) => {
-    console.log("you clicked me")
-    console.log(EventObject.target.id)
-    if(EventObject.target.id.includes("attractions-details")){
-        const idOfAttractionClicked = (EventObject.target.id.split("--").pop())
-        const allTheAttractions = useAttractions()
-        
-        const matchingAttraction = allTheAttractions.find((singleAttractionInLoop) => {
-            return singleAttractionInLoop.id === +idOfAttractionClicked
+    let detailListString = "";
+    //console.log("you clicked me")
+    //console.log(EventObject.target.id)
+    if(EventObject.target.id === "attractionSelect"){
+        getAttractions().then(() => {
+            let allTheAttractions = useAttractions()
+            
+            //console.log(EventObject.target.value)
+            
+             window.matchingAttraction = allTheAttractions.find((singleAttractionInLoop) => {
+                return singleAttractionInLoop.name === EventObject.target.value
         })
-        console.log("matching attractions", matchingAttractions.description)
 
+        console.log("Description", matchingAttraction.description)
 
-        document.querySelector(".attraction-button-container").innerHTML = ""
+        //detailListString = `${matchingAttraction.description}`
         
-        for(let i = 0; i <matchingattractions.description.length; i++)
-            document.querySelector(".attractions-button-container").innerHTML += `
-            <p><h5>Description:</h5>${matchingAttractions.description}</p>
-            `
+        })
     }
+    
+    document.querySelector(".attraction-details").innerHTML = `${matchingAttraction.description}`
+    console.log("Description", matchingAttraction.description)
+    // detailListString += attractionSelect.description;
 })
