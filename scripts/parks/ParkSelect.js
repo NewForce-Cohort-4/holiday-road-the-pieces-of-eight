@@ -40,6 +40,7 @@ eventHub.addEventListener("change", (eventObject) => {
             parkPreviewString = ''
             document.querySelector(".park-preview").innerHTML=' '
         }else{
+        printString = `<h3>Parks</h3>${eventObject.target.value}`
             
         parkPreviewString = `
         <div>
