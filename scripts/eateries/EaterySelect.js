@@ -33,6 +33,7 @@ eventHub.addEventListener("change", (eventObject) => {
     
 
     if(eventObject.target.id === "eaterySelect"){
+        window.chosenEatery = eventObject.target.value
         console.log("This is the eatery that was selected: ", eventObject.target.value)
 
         EateryList(eventObject.target.value)
@@ -66,35 +67,21 @@ export const EateryList = (optionSelected) => {
 }
 
 
-// const eateryDetailsEventHub = document.querySelector("body")
-// let eateryDetailListString = '';
-// eateryDetailsEventHub.addEventListener("click", (eventObject) => {
-//     if(eventObject.target.id === "eatery-details-button") {
-//         console.log(eventObject.target.id)
-//         // const eateryClicked = (eventObject.target.value)
-//         const allTheEateries = useEateries()
-//         console.log(eventObject.target.value)
-//         const matchingEateries = allTheEateries.find((singleEateryInLoop) => {
-//             return singleEateryInLoop.businessName === eventObject.target.value
-//         })
+// Prints details for eatery to the DOM when detail button is clicked
+    document.querySelector("body").addEventListener("click", (eventObject) => {
+        let eateryListString = "";
 
-//         eateryDetailListString += "";
-//     }
-//     document.querySelector(".eatery-details").innerHTML = `<h3>More Details:</h3>`
-// })
+        if(eventObject.target.id === "eatery-details-button"){
+            console.log("Hi")
+            getEateries().then(() => {
+                let allTheEateries = useEateries()
+                
+                 window.matchingEateries = allTheEateries.find((singleEateryInLoop) => {
+                    return singleEateryInLoop.businessName === chosenEatery
+            })
 
-//listening for click on body. if clicked && == details button, get the name of the selected park with chosenPark. grab complete set of parks data, itereate until finding an object with the same name as the one selected in dropwdown
-eventHub.addEventListener("click", (eventObject) => {
-    let eateryDetailString = ''
-    if (eventObject.target.id==='eatery-details'){
-        getEateries().then(() => {
-            let eateryArr = useEateries()
-            let result = eateryArr.find(obj => {
-                return obj.businessName == chosenEatery
-              })
-            eateryDetailString = `${result.description}Learn more at ${result.url}`
-            document.querySelector('.eatery-details').innerHTML= eateryDetailString
-        })
-    }
-    document.querySelector('.park-details').innerHTML= chosenEatery
-    }) 
+                document.querySelector(".eatery-details").innerHTML = `${matchingEateries.description}`
+            
+            })   
+        }
+    })
