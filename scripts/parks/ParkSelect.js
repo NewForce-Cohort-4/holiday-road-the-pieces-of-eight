@@ -12,9 +12,7 @@ export const ParkSelect = () => {
             parkArr.forEach(element => {
             parkNameArr.push(element.fullName)
     });
-     
     render(parkNameArr)
-    
     })
 }
 //function renders dropdown by iterating through each name and adding html string in order to create <options>(ind dropdown selections)
@@ -67,6 +65,6 @@ eventHub.addEventListener("click", (eventObject) => {
                 document.querySelector('.park-details').innerHTML= parkDetailString
             })
         }
-        document.querySelector('.park-details').innerHTML= chosenPark
-        })      
+        //document.querySelector('.park-details').innerHTML= chosenPark
+})      
 
