@@ -64,3 +64,21 @@ export const EateryList = (optionSelected) => {
         eateryContainer.innerHTML = `<h2>Eatery</h2>${eateryListHTMLString}`
     })
 }
+
+
+// const eateryDetailsEventHub = document.querySelector("body")
+// let eateryDetailListString = '';
+// eateryDetailsEventHub.addEventListener("click", (eventObject) => {
+//     if(eventObject.target.id === "eatery-details-button") {
+//         console.log(eventObject.target.id)
+//         // const eateryClicked = (eventObject.target.value)
+//         const allTheEateries = useEateries()
+//         console.log(eventObject.target.value)
+//         const matchingEateries = allTheEateries.find((singleEateryInLoop) => {
+//             return singleEateryInLoop.businessName === eventObject.target.value
+//         })
+
+//         eateryDetailListString += "";
+//     }
+//     document.querySelector(".eatery-details").innerHTML = `<h3>More Details:</h3>`
+// })
