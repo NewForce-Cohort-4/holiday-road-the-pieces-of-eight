@@ -82,3 +82,19 @@ export const EateryList = (optionSelected) => {
 //     }
 //     document.querySelector(".eatery-details").innerHTML = `<h3>More Details:</h3>`
 // })
+
+//listening for click on body. if clicked && == details button, get the name of the selected park with chosenPark. grab complete set of parks data, itereate until finding an object with the same name as the one selected in dropwdown
+eventHub.addEventListener("click", (eventObject) => {
+    let eateryDetailString = ''
+    if (eventObject.target.id==='eatery-details'){
+        getEateries().then(() => {
+            let eateryArr = useEateries()
+            let result = eateryArr.find(obj => {
+                return obj.businessName == chosenEatery
+              })
+            eateryDetailString = `${result.description}Learn more at ${result.url}`
+            document.querySelector('.eatery-details').innerHTML= eateryDetailString
+        })
+    }
+    document.querySelector('.park-details').innerHTML= chosenEatery
+    }) 
