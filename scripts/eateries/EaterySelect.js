@@ -33,6 +33,7 @@ eventHub.addEventListener("change", (eventObject) => {
     
 
     if(eventObject.target.id === "eaterySelect"){
+        window.chosenEatery = eventObject.target.value
         console.log("This is the eatery that was selected: ", eventObject.target.value)
 
         EateryList(eventObject.target.value)
@@ -64,3 +65,23 @@ export const EateryList = (optionSelected) => {
         eateryContainer.innerHTML = `<h2>Eatery</h2>${eateryListHTMLString}`
     })
 }
+
+
+// Prints details for eatery to the DOM when detail button is clicked
+    document.querySelector("body").addEventListener("click", (eventObject) => {
+        let eateryListString = "";
+
+        if(eventObject.target.id === "eatery-details-button"){
+            console.log("Hi")
+            getEateries().then(() => {
+                let allTheEateries = useEateries()
+                
+                 window.matchingEateries = allTheEateries.find((singleEateryInLoop) => {
+                    return singleEateryInLoop.businessName === chosenEatery
+            })
+
+                document.querySelector(".eatery-details").innerHTML = `${matchingEateries.description}`
+            
+            })   
+        }
+    })
