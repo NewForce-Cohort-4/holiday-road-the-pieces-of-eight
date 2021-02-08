@@ -31,11 +31,12 @@ const render = attractionCollection => {
 let printString = ""
 eventHub.addEventListener("change", (eventObject) => {
     //console.log("You clicked somewhere in the main container")
-
+    
     // To be more specific, we need to know specifically what we clicked on
     // console.log("Here is the element you clicked on: ", eventObject.target)
  
     if(eventObject.target.id === "attractionSelect"){
+        window.chosenAttraction = eventObject.target.value
         // console.log("You selected something from the attraction dropdown")
         // console.log("This is the attraction selected: ", eventObject.target.value);
     printString =  `<h2>Bizarrary</h2>${eventObject.target.value}<div><button id="attraction-details-button">Details</button></div>`
@@ -47,3 +48,5 @@ eventHub.addEventListener("change", (eventObject) => {
 
 }
 })
+
+//only run if specific id is clicked 

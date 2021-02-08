@@ -11,7 +11,9 @@
     margin: 0;
     padding: 0;
 }
-
+.container {
+    display: flex;
+}
 .navbar {
     background-color: #463F3A;
 }
@@ -58,4 +60,20 @@
 
 .filters-eateries {
     margin: auto;
+}
+
+aside {
+    border: 1px solid black;
+    background-color: rgb(162, 130, 238);
+    display: block;
+    float: right;
+    word-wrap: break-word;
+  }
+
+.it-details {
+	padding:5px;
+	display:inline-block;
+    vertical-align: top;
+    word-wrap: break-word;
+    text-align: center;
 }
