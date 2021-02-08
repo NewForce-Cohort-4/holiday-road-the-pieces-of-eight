@@ -15,7 +15,11 @@ EaterySelect()
 
 
 
+import { ListForm } from "./itinararies/ItinararyForm.js";
+import {} from "./itinararies/ItinararyList.js";
 
+ListForm();
+//SaveList();
 
 
 
