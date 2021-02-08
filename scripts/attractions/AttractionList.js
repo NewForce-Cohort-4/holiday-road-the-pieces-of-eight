@@ -22,7 +22,10 @@ document.querySelector("body").addEventListener("click", (EventObject) => {
         })
     }
     
-    document.querySelector(".attraction-details").innerHTML = `${matchingAttraction.description}`
+    document.querySelector(".attraction-details").innerHTML = `
+    <div class="card location-details-card">
+    <p class="card-text">${matchingAttraction.description}</p>
+    </div>`
     console.log("Description", matchingAttraction.description)
     // detailListString += attractionSelect.description;
 })
