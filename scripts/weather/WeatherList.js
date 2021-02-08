@@ -18,7 +18,7 @@ export const weatherPrinter = (latLong) => {
         for(let i=0; i<5; i++){
         
          it[i] = {
-            date: new Date(dailyWeatherArr[i].dt*1000),
+            date: new Date(dailyWeatherArr[i].dt*1000).toString().slice(0,3),
             high: dailyWeatherArr[i].temp.max,
             low: dailyWeatherArr[i].temp.min,
             forecast: dailyWeatherArr[i].weather[0].description,
@@ -30,12 +30,14 @@ export const weatherPrinter = (latLong) => {
         for(let i=0; i<5;i++){
             console.log(it[i]);
             weatherString +=`
-            <div class='day'>
-                <div>${it[i].date}</div>
-                <div>High: ${it[i].high}</div>
-                <div>Low: ${it[i].low}</div>
-                <div>Forecast : ${it[i].forecast}</div>
-                <div>${it[i].icon}</div>
+            <div class='day col-sm-2 card'>
+                <div class="card-body">
+                    <h5 class="card-title">${it[i].date}</h5>
+                    <div class="card-text">High: ${it[i].high}</div>
+                    <div class="card-text">Low: ${it[i].low}</div>
+                    <div class="card-text">Forecast : ${it[i].forecast}</div>
+                    <img class="weather-img" src="http://openweathermap.org/img/wn/${it[i].icon}@2x.png">
+                </div>
             </div>
             <br>
             `
