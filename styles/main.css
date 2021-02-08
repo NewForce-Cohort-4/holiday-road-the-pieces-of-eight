@@ -15,11 +15,11 @@
     display: flex;
 }
 .navbar {
-    background-color: #463F3A;
+    background-color: #F4F3EE;
 }
 
 .nav-link {
-    color:#F4F3EE;
+    color:#463F3A;
 }
 
 .card-text{
@@ -30,28 +30,39 @@
 }
 
 .card-img-top {
-    background-image: url("images/pexels-photo-459225.jpeg")
+    background-image: url("images/pexels-photo-459225.jpeg");
 
 } 
 
 .name-head {
     display: flex;
-    background-image: url(/images/pexels-photo-459225.jpeg);
-    align-items: flex-end;
-    justify-content: flex-end;
-    height: 30vh;
+    background-image: url(/images/pexels-pixabay-164170.jpg);
+    background-size: cover;
+    background-position: center bottom;
+    justify-content: center;
+    align-items: center;
+    height: 45vh;
     width: 100%;
     z-index: 1;
+    padding-top: 5vh;
+    padding-right: 1vw;
     margin: 0%;
+    color: #F4F3EE; 
+}
+
+.header-title {
+    font-size: 7vh;
 }
 
 .dropdowns {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.filter_attraction {
+ .filter_attraction {
     margin: auto;
-    padding: auto;
+    padding-right: 0;
 }
 
 .filters-parks {
@@ -60,6 +71,24 @@
 
 .filters-eateries {
     margin: auto;
+} 
+
+
+.details-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    background-color: #E0AFA0;
+}
+
+.weather-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 aside {

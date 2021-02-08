@@ -40,12 +40,13 @@ eventHub.addEventListener("change", (eventObject) => {
             parkPreviewString = ''
             document.querySelector(".park-preview").innerHTML=' '
         }else{
-        let printString = `<h3>Parks</h3>${eventObject.target.value}`
+        let parkPreviewString = `${eventObject.target.value}`
             
         parkPreviewString = `
-        <div>
-            <div>${eventObject.target.value}
-        <button id="park-detail">More Details</button>
+        <div class="card">
+            <h3 class="card-title text-center">Park</h3>
+            <p class="card-text text-center">${eventObject.target.value}</p>
+            <button class="btn btn-secondary" id="park-detail">Details</button>
          </div>  
          `
         document.querySelector(".park-preview").innerHTML=parkPreviewString
@@ -79,7 +80,10 @@ eventHub.addEventListener("click", (eventObject) => {
                 let result = parkArr.find(obj => {
                     return obj.fullName == chosenPark
                   })
-                parkDetailString = `${result.description}Learn more at ${result.url}`
+                parkDetailString = `
+                <div class="card park-details-card">
+                    <p class="card-text">${result.description} Learn more at: ${result.url}</p>
+                </div>`
                 document.querySelector('.park-details').innerHTML= parkDetailString
             })
         }

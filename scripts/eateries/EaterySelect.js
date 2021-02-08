@@ -62,7 +62,7 @@ export const EateryList = (optionSelected) => {
             eateryListHTMLString += Eatery(currentEateryInLoop)
         }
         
-        eateryContainer.innerHTML = `<h2>Eatery</h2>${eateryListHTMLString}`
+        eateryContainer.innerHTML = `${eateryListHTMLString}`
     })
 }
 
@@ -80,7 +80,10 @@ export const EateryList = (optionSelected) => {
                     return singleEateryInLoop.businessName === chosenEatery
             })
 
-                document.querySelector(".eatery-details").innerHTML = `${matchingEateries.description}`
+                document.querySelector(".eatery-details").innerHTML = `
+                <div class="card eatery-details-card">
+                <p class="card-text">${matchingEateries.description}</p>
+                </div>`
             
             })   
         }

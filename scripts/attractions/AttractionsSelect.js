@@ -39,7 +39,11 @@ eventHub.addEventListener("change", (eventObject) => {
         window.chosenAttraction = eventObject.target.value
         // console.log("You selected something from the attraction dropdown")
         // console.log("This is the attraction selected: ", eventObject.target.value);
-    printString =  `<h2>Bizarrary</h2>${eventObject.target.value}<div><button id="attraction-details-button">Details</button></div>`
+    printString =  `
+    <div class="card">
+    <h2 class="card-title text-center">Bizarrary</h2>
+    <p class="card-text text-center">${eventObject.target.value}</p>
+    <button class="btn btn-secondary" id="attraction-details-button">Details</button>`
 
  let locationContainer = document.querySelector(".attraction-preview") 
 

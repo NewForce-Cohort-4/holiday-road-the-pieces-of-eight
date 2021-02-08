@@ -17,12 +17,18 @@ document.querySelector("body").addEventListener("click", (EventObject) => {
         })
         //console.log("Description", matchingAttraction.description)
         //detailListString = `${matchingAttraction.description}`
-        document.querySelector(".attraction-details").innerHTML = `<h4></h4>${matchingAttraction.description}`
+        document.querySelector(".attraction-details").innerHTML = `
+        <div class="card location-details-card">
+        <p class="card-text">${matchingAttraction.description}</p>
+        </div>`
     })
         //document.querySelector(".attraction-details").innerHTML = `<h4></h4>${matchingAttraction.description}`
     }
     
-    //document.querySelector(".attraction-details").innerHTML = `<h4></h4>${matchingAttraction.description}`
-    //console.log("Description", matchingAttraction.description)
-    // detailListString += attractionSelect.description;
+    // //document.querySelector(".attraction-details").innerHTML = `
+    // <div class="card location-details-card">
+    // <p class="card-text">${matchingAttraction.description}</p>
+    // </div>`
+    // //onsole.log("Description", matchingAttraction.description)
+    // // detailListString += attractionSelect.description;
 })
